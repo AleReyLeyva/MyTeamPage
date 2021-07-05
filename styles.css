@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1,
+h5 {
+  font-family: 'PT Serif', monospace;
+}
+
+h3,
+h4 {
+  font-family: 'Poppins', monospace;
+}
+
+.container {
+  width: 55%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  height: 20vh;
+  align-items: center;
+}
+
+.header__left,
+.header__right {
+  flex: 1;
+}
+
+.header__left__title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.header__right__subtitle {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.header__right__description {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+/* Profiles */
+
+main {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.profile {
+  align-self: flex-start;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__photo {
+  width: 57.5%;
+  margin-bottom: 10px;
+  border-radius: 2.5px;
+}
+
+.profile__name {
+  font-size: 1.2rem;
+}
+
+.profile__job {
+  font-family: 'PT Serif', monospace;
+  font-size: 1.2rem;
+  font-weight: 400;
+  position: absolute;
+  right: 10%;
+  top: 0;
+  writing-mode: vertical-rl;
+}
+
+.profile2,
+.profile5 {
+  margin-top: 2.5rem;
+}
+
+/* Footer */
+
+.footer {
+  font-family: 'Montserrat', monospace;
+  font-size: 0.9rem;
+  text-align: center;
+
+  align-self: center;
+
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+}
+
+.footer__bold {
+  font-weight: 700;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 850px) {
+  header {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 2rem 0;
+  }
+
+  .header__left {
+    width: 100%;
+  }
+
+  .header__left__title {
+    text-align: left;
+  }
+
+  .profile5 {
+    margin-top: 0;
+  }
+
+  .profile2,
+  .profile4,
+  .profile6 {
+    margin-top: 2rem;
+  }
+
+  .profile__photo {
+    width: 80%;
+  }
+
+  .profile__job {
+    right: 0;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 3rem;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__left__title {
+    margin-bottom: 1rem;
+  }
+  header {
+    margin: 4rem 0 5rem 0;
+  }
+
+  .profile__job {
+    right: -3%;
+  }
+
+  .profile__photo {
+    width: 75%;
+  }
+}
